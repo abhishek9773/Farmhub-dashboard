@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Dashboard from "./pages/Dasgboard";
+import Dashboard from "./pages/Dashboard";
 import Header from "./components/Header";
 import "./App.css";
 import SlideBar from "./components/SlideBar";
@@ -8,11 +8,17 @@ export default function App() {
     <BrowserRouter>
       <div className="bg-lime-50">
         <Header />
-        <SlideBar />
-        <Routes>
-          <Route path="/" element={<Dashboard />} exact={true} />
-          <Route path="/dashboard" exact={true} element={<Dashboard />} />
-        </Routes>
+        <div className="flex   ">
+          <div className="w-[20%]">
+            <SlideBar />
+          </div>
+          <div className="w-full h-full p-4 min-h-screen  ">
+            <Routes>
+              <Route path="/" element={<Dashboard />} exact={true} />
+              <Route path="/dashboard" exact={true} element={<Dashboard />} />
+            </Routes>
+          </div>
+        </div>
       </div>
     </BrowserRouter>
   );

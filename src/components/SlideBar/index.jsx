@@ -5,6 +5,7 @@ import { MdOutlineArrowForwardIos } from "react-icons/md";
 import { RiLogoutCircleRLine } from "react-icons/ri";
 import { TbLayoutDashboardFilled } from "react-icons/tb";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const SlideBar = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -20,11 +21,12 @@ const SlideBar = () => {
 
   return (
     <div
-      className={`inline-block w-[20%] h-[100%] overflow-x-hidden overflow-y-scroll py-10 px-3 fixed bg-lime-50`}
+      className={` hidden lg:block  w-[20%] min-h-screen overflow-x-hidden overflow-y-scroll mt-[60px]  px-3 fixed bg-lime-50 scroll-m-4`}
     >
       <ul className="capitalize font-semibold ">
         <li className="">
-          <div
+          <Link
+            to="/dashboard"
             className="flex gap-2 items-center hover:bg-lime-200/40 rounded-md cursor-pointer p-3 "
             onClick={() => toggleAccordion(1)}
           >
@@ -40,7 +42,7 @@ const SlideBar = () => {
             >
               Dashboard
             </p>
-          </div>
+          </Link>
         </li>
         {/* 2 */}
         <li className="group">
@@ -229,7 +231,7 @@ const SlideBar = () => {
         </li>
       </ul>
 
-      <div className="relative w-full h-[150px] bg-lime-200 overflow-hidden  -bottom-40">
+      <div className="relative w-full h-[150px] bg-lime-200 overflow-hidden  -bottom-40 rounded-md">
         <div className="absolute h-[84px] w-[84px] rounded-full bg-lime-600/60 opacity-40 -top-10 -right-4"></div>
         <div className="absolute h-[150px] w-[150px] opacity-40 rounded-full bg-lime-600/60 -bottom-20 -right-4  "></div>
         <div className="absolute h-[32px] w-[32px] rounded-full bg-lime-600/60 opacity-40 top-6 left-4"></div>
