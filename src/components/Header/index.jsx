@@ -6,7 +6,7 @@ import { MdOutlineShoppingCart } from "react-icons/md";
 
 const Header = () => {
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center w-full h-[60px] px-4 bg-white  ">
+    <div className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center w-full h-[60px] px-4 bg-lime-50  ">
       <div className="flex items-center gap-10">
         <Link to={"/"} className="text-4xl font-bold text-black">
           FarmDash

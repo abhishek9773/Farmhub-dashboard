@@ -1,4 +1,8 @@
+import { GiStarsStack } from "react-icons/gi";
 import DashboardBox from "../../components/DashboardBox";
+import { FaShoppingBag, FaShoppingCart, FaUserCircle } from "react-icons/fa";
+import { FaArrowTrendUp } from "react-icons/fa6";
+import { IoMdTrendingDown, IoMdTrendingUp } from "react-icons/io";
 
 const Dashboard = () => {
   return (
@@ -9,27 +13,39 @@ const Dashboard = () => {
           <div className="flex gap-4 flex-wrap">
             <DashboardBox
               className={
-                " bg-gradient-to-r from-green-600 to-green-400 rounded-md"
+                " bg-gradient-to-r from-green-700 to-green-300 rounded-md"
               }
               title={"Total Users"}
+              icons={<FaUserCircle />}
+              percentage={20}
+              graph={<IoMdTrendingUp />}
             />
             <DashboardBox
               className={
-                " bg-gradient-to-r from-fuchsia-700 to-fuchsia-400 rounded-md"
+                " bg-gradient-to-r from-fuchsia-700 to-fuchsia-300 rounded-md"
               }
               title="Total Product Deliver"
+              icons={<FaShoppingCart />}
+              percentage={30}
+              graph={<IoMdTrendingDown />}
             />
             <DashboardBox
               className={
-                " bg-gradient-to-r from-cyan-600 to-cyan-400 rounded-md"
+                " bg-gradient-to-r from-cyan-700 to-cyan-300 rounded-md"
               }
               title="Total Sell"
+              icons={<FaShoppingBag />}
+              percentage={32}
+              graph={<IoMdTrendingDown />}
             />
             <DashboardBox
               className={
-                " bg-gradient-to-r from-yellow-800 to-yellow-400 rounded-md"
+                " bg-gradient-to-r from-yellow-700 to-yellow-300 rounded-md"
               }
               title="Total Sells"
+              icons={<GiStarsStack />}
+              percentage={38}
+              graph={<IoMdTrendingUp />}
             />
           </div>
         </div>
