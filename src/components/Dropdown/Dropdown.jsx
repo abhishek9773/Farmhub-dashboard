@@ -37,12 +37,12 @@ const Dropdown = ({ className, options }) => {
 
   return (
     <div
-      className={`relative inline-block text-left py-20 ${className}`}
+      className={`relative inline-block text-left pb-8  ${className}`}
       ref={dropdownRef}
     >
       <button
         type="button"
-        className="inline-flex items-center gap-2 justify-between w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none"
+        className="inline-flex items-center gap-2 justify-between w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-slate-100 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none"
         onClick={toggleMenu}
       >
         {selectedOption}

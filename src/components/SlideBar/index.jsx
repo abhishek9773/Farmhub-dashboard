@@ -21,13 +21,13 @@ const SlideBar = () => {
 
   return (
     <div
-      className={` hidden lg:block  w-[20%] min-h-screen overflow-x-hidden overflow-y-scroll mt-[60px]  px-3 fixed bg-lime-50 scroll-m-4`}
+      className={` hidden lg:block  w-[20%] min-h-screen overflow-x-hidden overflow-y-scroll mt-[60px]  px-3 fixed bg-lime-100 scroll-m-4`}
     >
       <ul className="capitalize font-semibold ">
         <li className="">
           <Link
             to="/dashboard"
-            className="flex gap-2 items-center hover:bg-lime-200/40 rounded-md cursor-pointer p-3 "
+            className="flex gap-2 items-center hover:bg-lime-200 rounded-md cursor-pointer p-3 "
             onClick={() => toggleAccordion(1)}
           >
             <TbLayoutDashboardFilled
@@ -47,7 +47,7 @@ const SlideBar = () => {
         {/* 2 */}
         <li className="group">
           <div
-            className="hover:bg-lime-200/40 text-gray-500 p-3 rounded-md flex items-center justify-between cursor-pointer"
+            className="hover:bg-lime-200 text-gray-500 p-3 rounded-md flex items-center justify-between cursor-pointer"
             onClick={() => toggleAccordion(2)}
           >
             <div className="flex gap-2 items-center">
@@ -102,7 +102,7 @@ const SlideBar = () => {
         {/* Order items 3 */}
         <li className="group">
           <div
-            className="hover:bg-lime-200/40 text-gray-500 p-3 rounded-md flex items-center justify-between cursor-pointer"
+            className="hover:bg-lime-200 text-gray-500 p-3 rounded-md flex items-center justify-between cursor-pointer"
             onClick={() => toggleAccordion(3)}
           >
             <div className="flex items-center gap-2">
@@ -167,7 +167,7 @@ const SlideBar = () => {
         {/* Category items- 4 */}
         <li className="group">
           <div
-            className="hover:bg-lime-200/40 text-gray-500 p-3 rounded-md flex items-center justify-between cursor-pointer"
+            className="hover:bg-lime-200 text-gray-500 p-3 rounded-md flex items-center justify-between cursor-pointer"
             onClick={() => toggleAccordion(4)}
           >
             <div className="flex items-center gap-2">
