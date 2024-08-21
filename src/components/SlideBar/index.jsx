@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { FaProductHunt, FaShoppingCart } from "react-icons/fa";
 import { IoSettingsSharp } from "react-icons/io5";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
@@ -6,10 +6,12 @@ import { RiLogoutCircleRLine } from "react-icons/ri";
 import { TbLayoutDashboardFilled } from "react-icons/tb";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { Mycontext } from "../../App";
 
 const SlideBar = () => {
   const [openIndex, setOpenIndex] = useState(null);
   const [selectedItem, setSelectedItem] = useState(null);
+  const context = useContext(Mycontext);
 
   const toggleAccordion = (index) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -21,7 +23,11 @@ const SlideBar = () => {
 
   return (
     <div
-      className={` hidden lg:block  w-[20%] min-h-screen overflow-x-hidden overflow-y-scroll mt-[60px]  px-3 fixed bg-lime-100 scroll-m-4`}
+      className={` hidden lg:block ${
+        context.isToggleSidebar === true
+          ? "transfrom -translate-x-full transition-transform ease-in-out duration-500"
+          : "transfrom translate-x-0 transition-transform ease-in-out duration-500 "
+      }   w-[20%] min-h-screen overflow-x-hidden overflow-y-scroll mt-[60px]  px-3 fixed bg-lime-100 `}
     >
       <ul className="capitalize font-semibold ">
         <li className="">

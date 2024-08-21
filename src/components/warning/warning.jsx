@@ -4,7 +4,7 @@ const MobileAndKeypadMessage = () => {
   return (
     <div className="relative">
       {/* Message for Large Screens */}
-      <div className="hidden lg:block absolute inset-0 flex items-center justify-center bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100">
+      <div className=" lg:block absolute w-full  flex items-center justify-center bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 ">
         <div className="flex flex-col items-center p-8 bg-white shadow-xl rounded-lg text-center border border-gray-200">
           {/* Placeholder Logo */}
           <div className="w-20 h-20 bg-gradient-to-r from-teal-400 to-blue-500 rounded-full flex items-center justify-center mb-4">
@@ -27,16 +27,18 @@ const MobileAndKeypadMessage = () => {
             Important Notice
           </p>
           <p className="text-base text-gray-700">
-            We apologize for the inconvenience. Currently, our website is
-            optimized for larger screens, and mobile and keypad versions may not
-            offer the best experience. We are actively working on improving this
-            and will have a more consistent experience available soon.
+            We apologize for the inconvenience. Our website is currently
+            optimized for larger screens, such as laptops and desktops. Mobile
+            and keypad versions may not provide the best experience. For optimal
+            use, please access our site on a larger screen device. We are
+            actively working on improvements and will soon offer a more
+            consistent experience across all devices.
           </p>
         </div>
       </div>
 
       {/* Message for Mobile and Keypad Users */}
-      <div className="block lg:hidden p-4 bg-yellow-200 text-yellow-800 border border-yellow-700 rounded-lg shadow-md">
+      <div className="block lg:hidden p-4 bg-yellow-100 text-yellow-800 border border-yellow-700 rounded-lg shadow-md">
         <div className="flex items-center mb-4">
           {/* Placeholder Logo */}
           <div className="w-16 h-16 bg-gradient-to-r from-teal-400 to-blue-500 rounded-full flex items-center justify-center mr-4">

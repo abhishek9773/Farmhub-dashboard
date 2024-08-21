@@ -2,9 +2,13 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { CiBoxList } from "react-icons/ci";
-import { MdOutlineShoppingCart } from "react-icons/md";
+import { MdOutlinePlaylistRemove, MdOutlineShoppingCart } from "react-icons/md";
+import { useContext } from "react";
+import { Mycontext } from "../../App";
 
 const Header = () => {
+  const context = useContext(Mycontext);
+  console.log(context);
   return (
     <div className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center w-full h-[60px] px-4 bg-lime-100  ">
       <div className="flex items-center gap-10">
@@ -13,9 +17,14 @@ const Header = () => {
         </Link>
         <motion.button
           whileTap={{ scale: 0.9 }}
+          onClick={() => context.setIsToggleSidebar(!context.isToggleSidebar)}
           className="bg-gray-300/30 hover:bg-blue-300/30 rounded-full w-[36px] h-[36px] flex items-center justify-center"
         >
-          <CiBoxList className="font-bold text-xl" />
+          {context.isToggleSidebar === false ? (
+            <CiBoxList className="font-bold text-xl" />
+          ) : (
+            <MdOutlinePlaylistRemove className="font-bold text-xl" />
+          )}
         </motion.button>
       </div>
       <div className="hidden lg:block">

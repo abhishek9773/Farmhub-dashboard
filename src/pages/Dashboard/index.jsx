@@ -52,10 +52,10 @@ const Dashboard = () => {
   }, [isOpenDropdown]);
 
   return (
-    <div className="pl-[30px] py-[60px] bg-lime-50 inset-0 ">
+    <div className=" py-[60px] bg-lime-50 inset-0 ">
       <div className="hidden lg:block">
-        <h1 className="text-xl font-semibold p-4">Dashboard</h1>
-        <div className="flex flex-wrap   mb-4  p-4 bg-lime-50">
+        <h1 className="text-xl font-semibold p-2">Dashboard</h1>
+        <div className="flex flex-wrap   mb-4 p-2  bg-lime-50">
           <div className="w-full md:w-8/12 ">
             <div className="flex gap-4 flex-wrap">
               <DashboardBox
@@ -89,7 +89,7 @@ const Dashboard = () => {
             </div>
           </div>
           <div className="w-full md:w-4/12 pl-0">
-            <div className="w-full h-full bg-gradient-to-b from-lime-600 to-lime-300 rounded-md p-4">
+            <div className="w-full h-full bg-gradient-to-b from-lime-500 to-lime-300 rounded-md p-4">
               <div className=" relative flex items-center justify-between font-bold text-white">
                 <p className="text-slate-50">Total Sales</p>
                 <button
@@ -196,7 +196,7 @@ const Dashboard = () => {
         </div>
       </div>
 
-      <div>
+      <div className="">
         <MobileAndKeypadMessage />
       </div>
     </div>
