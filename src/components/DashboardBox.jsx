@@ -65,7 +65,7 @@ const DashboardBox = ({ className, title, icons, percentage, graph }) => {
         </button>
 
         {showDropdown && (
-          <div className="absolute right-0 top-2 mt-2 w-32 bg-lime-50 rounded-md shadow-lg z-10 ">
+          <div className="absolute right-0 top-full  w-34 bg-lime-50 rounded-md shadow-lg z-10 ">
             <ul className="py-1 text-gray-700 text-sm">
               <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                 <div className="flex gap-1 items-center justify-start">
@@ -77,6 +77,12 @@ const DashboardBox = ({ className, title, icons, percentage, graph }) => {
                 <div className="flex gap-1 items-center justify-start">
                   <IoIosTimer />
                   <p>Last Week</p>
+                </div>
+              </li>
+              <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                <div className="flex gap-1 items-center justify-start">
+                  <IoIosTimer />
+                  <p>Last Month</p>
                 </div>
               </li>
               <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
