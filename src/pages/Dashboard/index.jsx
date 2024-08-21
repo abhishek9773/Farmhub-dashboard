@@ -52,7 +52,7 @@ const Dashboard = () => {
   }, [isOpenDropdown]);
 
   return (
-    <div className="pl-[30px] py-[60px] bg-lime-50 ">
+    <div className="pl-[30px] py-[60px] bg-lime-50 inset-0 ">
       <div className="hidden lg:block">
         <h1 className="text-xl font-semibold p-4">Dashboard</h1>
         <div className="flex flex-wrap   mb-4  p-4 bg-lime-50">
@@ -147,7 +147,7 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div className="p-4 shadow-2xl bg-lime-50 ">
+        <div className="p-4 shadow-xl bg-lime-50 ">
           <p className="font-semibold text-slate-600 py-2">
             Best Selling Products
           </p>
