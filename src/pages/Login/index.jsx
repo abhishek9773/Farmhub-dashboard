@@ -37,20 +37,20 @@ const Login = () => {
         <div className="text-xl text-green-200">Login to continue</div>
         <div className="relative font-medium bg-gray-300/30 p-16 m-2 rounded-md w-auto md:w-[450px]">
           <form className="">
-            <div className="relative flex items-center bg-gray-100 my-3 rounded-md focus-within:text-blue-600 text-slate-700">
+            <div className="relative flex items-center bg-gray-100 my-3 rounded-md focus-within:text-green-600 text-slate-700">
               <MdEmail className="absolute left-3 text-2xl  transition-colors duration-200" />
               <input
                 type="email"
                 placeholder="Enter your Email"
-                className="w-full pl-12 p-2 rounded-md text-md bg-gray-100 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-600 placeholder:text-sm"
+                className="w-full pl-12 p-2 rounded-md text-md bg-gray-100 focus:bg-white focus:outline-none focus:ring-2 focus:ring-green-600 placeholder:text-sm"
               />
             </div>
-            <div className="relative flex items-center bg-gray-100 mt-3 mb-1 rounded-md focus-within:text-blue-600  text-slate-700">
+            <div className="relative flex items-center bg-gray-100 mt-3 mb-1 rounded-md focus-within:text-green-600  text-slate-700">
               <RiLockPasswordFill className="absolute left-3 text-2xl transition-colors duration-200" />
               <input
                 type={showPassword ? "password" : "text"}
                 placeholder="Enter your Password"
-                className="w-full pl-12 p-2 rounded-md text-md bg-gray-100 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-600 placeholder:text-sm"
+                className="w-full pl-12 p-2 rounded-md text-md bg-gray-100 focus:bg-white focus:outline-none focus:ring-2 focus:ring-green-600 placeholder:text-sm"
               />
               <div
                 onClick={handleShowPassword}
@@ -78,7 +78,7 @@ const Login = () => {
 
               <p className="h-[1px] bg-white/50 w-[42%]"></p>
             </div>
-            <div className="flex items-center bg-green-400 p-2 gap-4 justify-center  rounded-md">
+            <div className="flex items-center hover:bg-green-400 bg-green-500 p-2 gap-4 justify-center cursor-pointer  rounded-md">
               <FcGoogle className="text-3xl font-bold  " />
               <p className="text-center font-semibold text-black">
                 Login with Google

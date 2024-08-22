@@ -46,7 +46,7 @@ const Register = () => {
             weekly, monthly, and yearly performance metrics.
           </p>
           <Link to="/">
-            <button className="flex items-center gap-2 p-3 bg-green-500 rounded-md text-white uppercase">
+            <button className="flex items-center gap-2 p-3 bg-green-500 hover:bg-green-500/50 rounded-md text-white uppercase">
               <MdHome className="text-xl md:text-2xl" />
               <span>Go to Home</span>
             </button>
@@ -61,30 +61,30 @@ const Register = () => {
           <div className="text-lg md:text-xl text-green-200 mb-4">
             Login to continue
           </div>
-          <div className="relative font-medium pb-12 px-4 md:px-8 pt-1 m-2 rounded-md bg-white text-gray-800">
+          <div className="relative font-medium pb-12 px-4 md:px-8 pt-1 m-2 rounded-md bg-white/50 text-gray-800">
             <form>
-              <div className="relative flex items-center bg-gray-100 my-3 rounded-md">
-                <FaUserCircle className="absolute left-3 text-xl md:text-2xl text-gray-500" />
+              <div className="relative flex items-center bg-gray-100 my-3 rounded-md text-gray-500 focus-within:text-green-500">
+                <FaUserCircle className="absolute left-3 text-xl md:text-2xl " />
                 <input
                   type="text"
                   placeholder="Enter your Name"
-                  className="w-full pl-12 p-2 rounded-md text-md bg-gray-100 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-600 placeholder:text-sm"
+                  className="w-full pl-12 p-2 rounded-md text-md bg-gray-100 focus:bg-white focus:outline-none focus:ring-2 focus:ring-green-500 placeholder:text-sm"
                 />
               </div>
-              <div className="relative flex items-center bg-gray-100 my-3 rounded-md">
-                <MdEmail className="absolute left-3 text-xl md:text-2xl text-gray-500" />
+              <div className="relative flex items-center bg-gray-100 my-3 rounded-md  focus-within:text-green-500 text-gray-500">
+                <MdEmail className="absolute left-3 text-xl md:text-2xl " />
                 <input
                   type="email"
                   placeholder="Enter your Email"
-                  className="w-full pl-12 p-2 rounded-md text-md bg-gray-100 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-600 placeholder:text-sm"
+                  className="w-full pl-12 p-2 rounded-md text-md bg-gray-100 focus:bg-white focus:outline-none focus:ring-2 focus:ring-green-500 placeholder:text-sm"
                 />
               </div>
-              <div className="relative flex items-center bg-gray-100 my-3 rounded-md">
-                <RiLockPasswordFill className="absolute left-3 text-xl md:text-2xl text-gray-500" />
+              <div className="relative flex items-center bg-gray-100 my-3 rounded-md focus-within:text-green-500 text-gray-500">
+                <RiLockPasswordFill className="absolute left-3 text-xl md:text-2xl  " />
                 <input
                   type={showPassword ? "password" : "text"}
                   placeholder="Enter your Password"
-                  className="w-full pl-12 p-2 rounded-md text-md bg-gray-100 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-600 placeholder:text-sm"
+                  className="w-full pl-12 p-2 rounded-md text-md bg-gray-100 focus:bg-white focus:outline-none focus:ring-2 focus:ring-green-500 placeholder:text-sm"
                 />
                 <div
                   onClick={handleShowPassword}
@@ -93,12 +93,12 @@ const Register = () => {
                   {showPassword ? <IoMdEye /> : <IoMdEyeOff />}
                 </div>
               </div>
-              <div className="relative flex items-center bg-gray-100 my-3 rounded-md">
-                <RiShieldCheckFill className="absolute left-3 text-xl md:text-2xl text-gray-500" />
+              <div className="relative flex items-center bg-gray-100 my-3 rounded-md text-gray-500 focus-within:text-green-500">
+                <RiShieldCheckFill className="absolute left-3 text-xl md:text-2xl " />
                 <input
                   type={showPassword ? "password" : "text"}
                   placeholder="Confirm your password"
-                  className="w-full pl-12 p-2 rounded-md text-md bg-gray-100 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-600 placeholder:text-sm"
+                  className="w-full pl-12 p-2 rounded-md text-md bg-gray-100 focus:bg-white focus:outline-none focus:ring-2 focus:ring-green-500 placeholder:text-sm"
                 />
                 <div
                   onClick={handleShowPassword}
@@ -109,7 +109,7 @@ const Register = () => {
               </div>
 
               <Link to="/forgot-password">
-                <p className="text-xs text-lime-300 underline hover:text-lime-200 cursor-pointer">
+                <p className="text-xs pl-52 text-gray-700 underline hover:text-green-600 cursor-pointer">
                   Forgot Password
                 </p>
               </Link>
@@ -118,7 +118,7 @@ const Register = () => {
                 <input type="checkbox" className="rounded-lg w-4 h-4" />
                 <p className="text-black/90 text-xs font-normal">
                   I agree to all{" "}
-                  <span className="underline cursor-pointer hover:text-lime-300">
+                  <span className="underline cursor-pointer hover:text-green-600">
                     Terms & Conditions
                   </span>
                 </p>
@@ -129,29 +129,30 @@ const Register = () => {
               </div>
 
               <div className="flex items-center my-4">
-                <p className="h-[1px] bg-white/50 w-[42%]"></p>
-                <p className="rounded-full border border-white/50 text-slate-100 text-xs border-black m-1 w-8 h-8 flex items-center justify-center">
+                <p className="h-[1px] bg-slate-500/50 w-[42%]"></p>
+                <p className="rounded-full border border-black/50 text-slate-500 text-xs border-black m-1 w-8 h-8 flex items-center justify-center">
                   or
                 </p>
-                <p className="h-[1px] bg-white/50 w-[42%]"></p>
+                <p className="h-[1px] bg-slate-500/50 w-[42%]"></p>
               </div>
 
-              <div className="flex items-center bg-blue-300 p-2 gap-4 justify-center rounded-md cursor-pointer">
+              <div className="flex items-center hover:bg-blue-300 bg-blue-400 p-2 gap-4 justify-center rounded-md cursor-pointer">
                 <FcGoogle className="text-2xl md:text-3xl" />
                 <p className="text-center font-semibold text-black">
                   Login with Google
                 </p>
               </div>
 
-              <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-center">
-                <p className="text-gray-200 text-sm">
+              <div className="absolute bottom-2 left-1/2 flex gap-1 transform -translate-x-1/2 items-center">
+                <p className="text-gray-700 text-xs">
                   Already have an account?{" "}
-                  <Link to="/login">
-                    <span className="text-lime-400 font-bold cursor-pointer hover:text-lime-300">
-                      Login
-                    </span>
-                  </Link>
                 </p>
+                <Link
+                  to="/login"
+                  className="text-black underline  cursor-pointer hover:text-green-600 text-xs"
+                >
+                  Login
+                </Link>
               </div>
             </form>
           </div>
