@@ -196,7 +196,7 @@ const Dashboard = () => {
         </div>
       </div>
 
-      <div className="">
+      <div className="relative">
         <MobileAndKeypadMessage />
       </div>
     </div>
