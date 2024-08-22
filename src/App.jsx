@@ -5,6 +5,8 @@ import "./App.css";
 import SlideBar from "./components/SlideBar";
 import { createContext, useEffect, useState } from "react";
 import Login from "./pages/Login";
+import Register from "./pages/Register/Register";
+import Custom404 from "./pages/404";
 
 export const Mycontext = createContext();
 
@@ -55,9 +57,11 @@ export default function App() {
               } flex-grow h-full transition-all ease-in-out duration-300`}
             >
               <Routes>
-                <Route path="/" element={<Dashboard />} exact />
+                <Route path="/" element={<Dashboard />} />
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
+                <Route path="/*" element={<Custom404 />} />
               </Routes>
             </div>
           </div>

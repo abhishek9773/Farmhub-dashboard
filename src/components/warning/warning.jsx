@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
+import { Mycontext } from "../../App";
 
 const MobileAndKeypadMessage = () => {
+  // const context = useContext(Mycontext);
+  // useEffect(() => {
+  //   context.setIsHiddenSidebarAndHeader(true);
+  // }, [context]);
+
   return (
     <div className="relative w-full h-full py-2">
       {/* Message for Large Screens */}
@@ -28,9 +34,12 @@ const MobileAndKeypadMessage = () => {
             We apologize for the inconvenience. Our website is currently
             optimized for larger screens, such as laptops and desktops. Mobile
             and keypad versions may not provide the best experience. For optimal
-            use, please access our site on a larger screen device. We are
-            actively working on improvements and will soon offer a more
-            consistent experience across all devices.
+            use, please access our site on a larger screen device.
+            <span className="block py-2 font-semibold text-sm text-yellow-800">
+              {" "}
+              We are actively working on improvements and will soon offer a more
+              consistent experience across all devices.
+            </span>
           </p>
         </div>
       </div>

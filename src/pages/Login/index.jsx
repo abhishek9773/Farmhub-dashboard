@@ -68,7 +68,7 @@ const Login = () => {
             </Link>
 
             <div className="w-full inline-block bg-lime-400 hover:bg-lime-300 my-4 py-2 text-slate-800 rounded-md font-semibold  text-sm ">
-              <button className="uppercase">Sign in</button>
+              <button className="uppercase">Login</button>
             </div>
             <div className="flex items-center">
               <p className="h-[1px] bg-white/50 w-[42%]"></p>
@@ -78,9 +78,11 @@ const Login = () => {
 
               <p className="h-[1px] bg-white/50 w-[42%]"></p>
             </div>
-            <div className="flex items-center bg-green-500/85 p-2 gap-4 justify-center  rounded-md">
+            <div className="flex items-center bg-green-400 p-2 gap-4 justify-center  rounded-md">
               <FcGoogle className="text-3xl font-bold  " />
-              <p className="text-center font-semibold">Login with Google</p>
+              <p className="text-center font-semibold text-black">
+                Login with Google
+              </p>
             </div>
             <div className="absolute bottom-2 pl-8 text-center flex items-center justify-center">
               <p className="text-gray-200 text-sm">
