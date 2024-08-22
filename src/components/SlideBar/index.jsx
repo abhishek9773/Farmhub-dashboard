@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { FaProductHunt, FaShoppingCart } from "react-icons/fa";
+import { FaLock, FaProductHunt, FaShoppingCart } from "react-icons/fa";
 import { IoSettingsSharp } from "react-icons/io5";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
 import { RiLogoutCircleRLine } from "react-icons/ri";
@@ -231,6 +231,60 @@ const SlideBar = () => {
                 onClick={() => selectItem("Privacy")}
               >
                 Add a Sub Category
+              </p>
+            </div>
+          )}
+        </li>
+        <li className="group">
+          <div
+            className="hover:bg-lime-200 text-gray-500 p-3 rounded-md flex items-center justify-between cursor-pointer"
+            onClick={() => toggleAccordion(5)}
+          >
+            <div className="flex items-center gap-2">
+              <FaLock
+                className={`${
+                  openIndex == 5 ? "text-blue-600" : "text-black/70"
+                } `}
+              />
+              <p>Authentication</p>
+            </div>
+            <MdOutlineArrowForwardIos
+              className={`transform transition-transform duration-200 ${
+                openIndex === 5 ? "rotate-90" : ""
+              }`}
+            />
+          </div>
+          {openIndex === 5 && (
+            <div className="pl-4 mt-2 text-gray-600 text-sm font-semibold">
+              <p
+                className={`py-2  pl-2 rounded-md cursor-pointer ${
+                  selectedItem === "Profile"
+                    ? " text-blue-600"
+                    : "hover:bg-lime-200"
+                }`}
+                onClick={() => selectItem("Profile")}
+              >
+                Login
+              </p>
+              <p
+                className={`py-2 pl-2  rounded-md cursor-pointer  ${
+                  selectedItem === "Account"
+                    ? " text-blue-600 "
+                    : "hover:bg-lime-200"
+                }`}
+                onClick={() => selectItem("Account")}
+              >
+                Registration
+              </p>
+              <p
+                className={`py-2 pl-2 rounded-md cursor-pointer ${
+                  selectedItem === "Privacy"
+                    ? "  text-blue-600"
+                    : "hover:bg-lime-200"
+                }`}
+                onClick={() => selectItem("Privacy")}
+              >
+                Forgot Password
               </p>
             </div>
           )}

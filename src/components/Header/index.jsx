@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { CiBoxList } from "react-icons/ci";
 import { MdOutlinePlaylistRemove, MdOutlineShoppingCart } from "react-icons/md";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Mycontext } from "../../App";
 
 const Header = () => {
@@ -62,23 +62,34 @@ const Header = () => {
             </div>
           </div>
 
-          <motion.div
-            whileTap={{ scale: 0.9 }}
-            className="flex gap-2 cursor-pointer hover:bg-lime-100/80 px-2 rounded-"
-          >
-            <div className="overflow-hidden">
-              <motion.img
-                whileHover={{ scale: 1.09 }}
-                src="src/assets/logo.png"
-                alt=""
-                className="w-12 h-12 rounded-full border-blue-600 border-spacing-3 object-cover"
-              />
-            </div>
-            <div className="hidden lg:block">
-              <p className="font-semibold">Abhishek Kumar</p>
-              <p className="opacity-50 font-normal text-xs">@abhishek9773</p>
-            </div>
-          </motion.div>
+          {context.isLogin ? (
+            <motion.div
+              whileTap={{ scale: 0.9 }}
+              className="flex gap-2 cursor-pointer hover:bg-lime-100/80 px-2 rounded-"
+            >
+              <div className="overflow-hidden">
+                <motion.img
+                  whileHover={{ scale: 1.09 }}
+                  src="https://i.postimg.cc/7hVw6Ms2/3.png"
+                  alt=""
+                  className="w-12 h-12 rounded-full border-blue-600 border-spacing-3 object-cover"
+                />
+              </div>
+              <div className="hidden lg:block">
+                <p className="font-semibold">Abhishek Kumar</p>
+                <p className="opacity-50 font-normal text-xs">@abhishek9773</p>
+              </div>
+            </motion.div>
+          ) : (
+            <Link to={"/login"}>
+              <motion.button
+                whileTap={{ scale: 0.9 }}
+                className="px-4 py-2 bg-lime-500 hover:bg-lime-400 font-semibold rounded-md"
+              >
+                Login
+              </motion.button>
+            </Link>
+          )}
         </div>
       </div>
     </div>
