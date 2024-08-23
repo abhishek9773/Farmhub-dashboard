@@ -47,21 +47,20 @@ const Header = () => {
       </div>
       <div className="">
         <div className="flex gap-4 items-center justify-between">
-          <div className="hidden lg:block">
-            <div className="bg-gray-300/30 hover:bg-blue-300/30 rounded-full w-[36px] h-[36px] flex items-center justify-center relative">
-              <motion.div
-                whileTap={{ scale: 0.8 }}
-                className="relative cursor-pointer"
-                onClick={() => context.setThemeMode(!context.themeMode)}
-              >
-                {context.themeMode === true ? (
-                  <MdOutlineDarkMode className="text-xl hover:text-blue-500 font-bold" />
-                ) : (
-                  <MdOutlineWbSunny className="text-xl hover:text-blue-500 font-bold" />
-                )}
-              </motion.div>
-            </div>
+          <div className="bg-gray-300/30 hover:bg-blue-300/30 rounded-full w-[36px] h-[36px] flex items-center justify-center relative">
+            <motion.div
+              whileTap={{ scale: 0.8 }}
+              className="relative cursor-pointer"
+              onClick={() => context.setThemeMode(!context.themeMode)}
+            >
+              {context.themeMode === true ? (
+                <MdOutlineDarkMode className="text-xl hover:text-blue-500 font-bold" />
+              ) : (
+                <MdOutlineWbSunny className="text-xl hover:text-blue-500 font-bold" />
+              )}
+            </motion.div>
           </div>
+
           <div className="hidden lg:block">
             <div className="bg-gray-300/30 hover:bg-blue-300/30 rounded-full w-[36px] h-[36px] flex items-center justify-center relative">
               <motion.div

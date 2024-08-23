@@ -29,7 +29,7 @@ const SlideBar = () => {
           : "transfrom translate-x-0 transition-transform ease-in-out duration-500 "
       }   w-[20%] min-h-screen overflow-x-hidden overflow-y-scroll mt-[60px]  px-3 fixed ${
         context.themeMode === true ? "bg-lime-100" : "bg-gray-800"
-      } bg-lime-100 `}
+      }`}
     >
       <ul className="capitalize font-semibold ">
         <li className="">

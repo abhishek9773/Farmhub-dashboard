@@ -1,4 +1,10 @@
-import { BrowserRouter, Route, Routes, redirect } from "react-router-dom";
+import {
+  BrowserRouter,
+  Route,
+  Routes,
+  redirect,
+  useLocation,
+} from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
 import Header from "./components/Header";
 import "./App.css";
@@ -8,6 +14,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register/Register";
 import Custom404 from "./pages/404";
 import { CgDarkMode } from "react-icons/cg";
+import ProductDetails from "./pages/ProductDetails";
 
 export const Mycontext = createContext();
 
@@ -79,6 +86,8 @@ export default function App() {
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
+
+                <Route path="/product/details" element={<ProductDetails />} />
                 <Route path="/*" element={<Custom404 />} />
               </Routes>
             </div>

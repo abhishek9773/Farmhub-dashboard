@@ -3,6 +3,7 @@ import { FarmProductData } from "../../utils/data/FarmingTableData";
 import { MdDelete, MdModeEdit, MdPreview } from "react-icons/md";
 import { motion } from "framer-motion";
 import { ImEye } from "react-icons/im";
+import { Link } from "react-router-dom";
 
 const ProductTable = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -85,7 +86,9 @@ const ProductTable = () => {
               <td className="px-6 py-4 border">
                 <div className="flex gap-2">
                   <motion.div whileTap={{ scale: 0.9 }}>
-                    <ImEye className="hover:bg-fuchsia-300 bg-fuchsia-200 text-fuchsia-600 p-1 rounded-lg text-2xl cursor-pointer" />
+                    <Link to="product/details">
+                      <ImEye className="hover:bg-fuchsia-300 bg-fuchsia-200 text-fuchsia-600 p-1 rounded-lg text-2xl cursor-pointer" />
+                    </Link>
                   </motion.div>
                   <motion.div whileTap={{ scale: 0.9 }}>
                     <MdModeEdit className="hover:bg-green-300 bg-green-200 text-green-600 p-1 rounded-lg text-2xl cursor-pointer" />
