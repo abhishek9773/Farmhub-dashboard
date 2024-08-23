@@ -3,12 +3,13 @@ import DashboardBox from "../../components/DashboardBox";
 import { FaShoppingBag, FaShoppingCart, FaUserCircle } from "react-icons/fa";
 import { IoMdTrendingDown, IoMdTrendingUp, IoIosTimer } from "react-icons/io";
 import { BsThreeDotsVertical } from "react-icons/bs";
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import Chart from "react-google-charts";
 import { ChartArea } from "lucide-react";
 import Dropdown from "../../components/Dropdown/Dropdown";
 import ProductTabe from "../../components/ProductTable";
 import MobileAndKeypadMessage from "../../components/warning/warning";
+import { Mycontext } from "../../App";
 
 export const data = [
   ["Task", "Hours per Day"],
@@ -26,6 +27,13 @@ export const options = {
 };
 const Dashboard = () => {
   const [isOpenDropdown, setIsOpenDropDown] = useState(false);
+
+  const context = useContext(Mycontext);
+  const background = context.themeMode === true;
+  useEffect(() => {
+    context.setIsHiddenSidebarAndHeader(false);
+    window.scrollTo(0, 0);
+  });
 
   const dropdownRef = useRef(null);
 
@@ -52,10 +60,14 @@ const Dashboard = () => {
   }, [isOpenDropdown]);
 
   return (
-    <div className=" py-[60px] bg-lime-50 inset-0 ">
+    <div
+      className={` py-[60px] ${
+        background ? " bg-lime-50" : "bg-gray-400"
+      } inset-0 `}
+    >
       <div className="hidden lg:block">
         <h1 className="text-xl font-semibold p-2">Dashboard</h1>
-        <div className="flex flex-wrap   mb-4 p-2  bg-lime-50">
+        <div className="flex flex-wrap   mb-4 p-2  ">
           <div className="w-full md:w-8/12 ">
             <div className="flex gap-4 flex-wrap">
               <DashboardBox
@@ -147,12 +159,15 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div className="p-4 shadow-xl bg-lime-50 ">
+        <div className="p-4 shadow-xl  ">
           <p className="font-semibold text-slate-600 py-2">
             Best Selling Products
           </p>
 
-          <div className="flex items-center justify-between">
+          <div
+            className={`flex items-center justify-between 
+                ${background ? "bg-lime-50" : "bg-gray-400"}`}
+          >
             <div className="flex flex-col items-start justify-start">
               <p className="font-bold text-xs text-slate-500"> SHOW BY</p>
               <Dropdown

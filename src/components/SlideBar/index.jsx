@@ -27,7 +27,9 @@ const SlideBar = () => {
         context.isToggleSidebar === true
           ? "transfrom -translate-x-full transition-transform ease-in-out duration-500"
           : "transfrom translate-x-0 transition-transform ease-in-out duration-500 "
-      }   w-[20%] min-h-screen overflow-x-hidden overflow-y-scroll mt-[60px]  px-3 fixed bg-lime-100 `}
+      }   w-[20%] min-h-screen overflow-x-hidden overflow-y-scroll mt-[60px]  px-3 fixed ${
+        context.themeMode === true ? "bg-lime-100" : "bg-gray-800"
+      } bg-lime-100 `}
     >
       <ul className="capitalize font-semibold ">
         <li className="">

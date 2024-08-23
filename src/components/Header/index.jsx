@@ -2,7 +2,13 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { CiBoxList } from "react-icons/ci";
-import { MdOutlinePlaylistRemove, MdOutlineShoppingCart } from "react-icons/md";
+import {
+  MdDarkMode,
+  MdOutlineDarkMode,
+  MdOutlinePlaylistRemove,
+  MdOutlineShoppingCart,
+  MdOutlineWbSunny,
+} from "react-icons/md";
 import { useContext, useState } from "react";
 import { Mycontext } from "../../App";
 
@@ -10,9 +16,15 @@ const Header = () => {
   const context = useContext(Mycontext);
   console.log(context);
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center w-full h-[60px] px-4 bg-lime-100  ">
+    <div
+      className={`fixed top-0 left-0 right-0 z-50 flex justify-between items-center w-full h-[60px] px-4  ${
+        context.themeMode === true
+          ? "bg-lime-100"
+          : "bg-gray-800 text-slate-300"
+      }   `}
+    >
       <div className="flex items-center gap-10">
-        <Link to={"/"} className="md:text-4xl font-bold text-black text-2xl">
+        <Link to={"/"} className="md:text-4xl font-bold  text-2xl">
           FarmDash
         </Link>
         <motion.button
@@ -35,6 +47,21 @@ const Header = () => {
       </div>
       <div className="">
         <div className="flex gap-4 items-center justify-between">
+          <div className="hidden lg:block">
+            <div className="bg-gray-300/30 hover:bg-blue-300/30 rounded-full w-[36px] h-[36px] flex items-center justify-center relative">
+              <motion.div
+                whileTap={{ scale: 0.8 }}
+                className="relative cursor-pointer"
+                onClick={() => context.setThemeMode(!context.themeMode)}
+              >
+                {context.themeMode === true ? (
+                  <MdOutlineDarkMode className="text-xl hover:text-blue-500 font-bold" />
+                ) : (
+                  <MdOutlineWbSunny className="text-xl hover:text-blue-500 font-bold" />
+                )}
+              </motion.div>
+            </div>
+          </div>
           <div className="hidden lg:block">
             <div className="bg-gray-300/30 hover:bg-blue-300/30 rounded-full w-[36px] h-[36px] flex items-center justify-center relative">
               <motion.div

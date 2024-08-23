@@ -66,9 +66,10 @@ const Register = () => {
               <div className="relative flex items-center bg-gray-100 my-3 rounded-md text-gray-500 focus-within:text-green-500">
                 <FaUserCircle className="absolute left-3 text-xl md:text-2xl " />
                 <input
+                  autoFocus
                   type="text"
                   placeholder="Enter your Name"
-                  className="w-full pl-12 p-2 rounded-md text-md bg-gray-100 focus:bg-white focus:outline-none focus:ring-2 focus:ring-green-500 placeholder:text-sm"
+                  className="w-full pl-12 p-2 rounded-md text-md bg-gray-100 focus:bg-white focus:outline-none focus:ring-2 focus:ring-green-500 text-gray-600 placeholder:text-sm"
                 />
               </div>
               <div className="relative flex items-center bg-gray-100 my-3 rounded-md  focus-within:text-green-500 text-gray-500">
@@ -76,7 +77,7 @@ const Register = () => {
                 <input
                   type="email"
                   placeholder="Enter your Email"
-                  className="w-full pl-12 p-2 rounded-md text-md bg-gray-100 focus:bg-white focus:outline-none focus:ring-2 focus:ring-green-500 placeholder:text-sm"
+                  className="w-full pl-12 p-2 rounded-md text-md bg-gray-100 focus:bg-white focus:outline-none focus:ring-2 focus:ring-green-500 placeholder:text-sm text-gray-600"
                 />
               </div>
               <div className="relative flex items-center bg-gray-100 my-3 rounded-md focus-within:text-green-500 text-gray-500">
@@ -84,7 +85,7 @@ const Register = () => {
                 <input
                   type={showPassword ? "password" : "text"}
                   placeholder="Enter your Password"
-                  className="w-full pl-12 p-2 rounded-md text-md bg-gray-100 focus:bg-white focus:outline-none focus:ring-2 focus:ring-green-500 placeholder:text-sm"
+                  className="w-full pl-12 p-2 rounded-md text-md bg-gray-100 focus:bg-white focus:outline-none focus:ring-2 focus:ring-green-500 placeholder:text-sm text-gray-600"
                 />
                 <div
                   onClick={handleShowPassword}
@@ -98,7 +99,7 @@ const Register = () => {
                 <input
                   type={showPassword ? "password" : "text"}
                   placeholder="Confirm your password"
-                  className="w-full pl-12 p-2 rounded-md text-md bg-gray-100 focus:bg-white focus:outline-none focus:ring-2 focus:ring-green-500 placeholder:text-sm"
+                  className="w-full pl-12 p-2 rounded-md text-md bg-gray-100 focus:bg-white focus:outline-none focus:ring-2 focus:ring-green-500 placeholder:text-sm text-gray-600"
                 />
                 <div
                   onClick={handleShowPassword}

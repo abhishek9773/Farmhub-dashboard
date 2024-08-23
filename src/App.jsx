@@ -7,6 +7,7 @@ import { createContext, useEffect, useState } from "react";
 import Login from "./pages/Login";
 import Register from "./pages/Register/Register";
 import Custom404 from "./pages/404";
+import { CgDarkMode } from "react-icons/cg";
 
 export const Mycontext = createContext();
 
@@ -15,6 +16,21 @@ export default function App() {
   const [isLogin, setIsLogin] = useState(false);
   const [isHiddenSidebarAndHeader, setIsHiddenSidebarAndHeader] =
     useState(false);
+  const [themeMode, setThemeMode] = useState(true);
+
+  useEffect(() => {
+    if (themeMode === true) {
+      document.body.classList.remove("dark");
+
+      document.body.classList.add("light");
+      localStorage.setItem("themeMode", "light");
+    } else {
+      document.body.classList.remove("light");
+
+      document.body.classList.add("dark");
+      localStorage.setItem("themeMode", "dark");
+    }
+  }, [themeMode]);
 
   const value = {
     isToggleSidebar,
@@ -23,6 +39,8 @@ export default function App() {
     setIsLogin,
     isHiddenSidebarAndHeader,
     setIsHiddenSidebarAndHeader,
+    themeMode,
+    setThemeMode,
   };
 
   // useEffect(() => {

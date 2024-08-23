@@ -12,6 +12,7 @@ const Login = () => {
 
   const handleShowPassword = () => {
     setShowPassword(!showPassword);
+    window.scrollTo(0, 0);
   };
 
   useEffect(() => {
@@ -40,9 +41,10 @@ const Login = () => {
             <div className="relative flex items-center bg-gray-100 my-3 rounded-md focus-within:text-green-600 text-slate-700">
               <MdEmail className="absolute left-3 text-2xl  transition-colors duration-200" />
               <input
+                autoFocus
                 type="email"
                 placeholder="Enter your Email"
-                className="w-full pl-12 p-2 rounded-md text-md bg-gray-100 focus:bg-white focus:outline-none focus:ring-2 focus:ring-green-600 placeholder:text-sm"
+                className="w-full pl-12 p-2 rounded-md text-md bg-gray-100 focus:bg-white focus:outline-none focus:ring-2 focus:ring-green-600 placeholder:text-sm text-gray-600"
               />
             </div>
             <div className="relative flex items-center bg-gray-100 mt-3 mb-1 rounded-md focus-within:text-green-600  text-slate-700">
@@ -50,7 +52,7 @@ const Login = () => {
               <input
                 type={showPassword ? "password" : "text"}
                 placeholder="Enter your Password"
-                className="w-full pl-12 p-2 rounded-md text-md bg-gray-100 focus:bg-white focus:outline-none focus:ring-2 focus:ring-green-600 placeholder:text-sm"
+                className="w-full pl-12 p-2 rounded-md text-md bg-gray-100 focus:bg-white focus:outline-none focus:ring-2 focus:ring-green-600 placeholder:text-sm text-gray-600"
               />
               <div
                 onClick={handleShowPassword}
