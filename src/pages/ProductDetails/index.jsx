@@ -23,7 +23,7 @@ const ProductDetails = () => {
     arrows: false,
   };
   return (
-    <div className="py-[60px]  min-w-screen min-h-screen relative">
+    <div className="py-[60px]  min-w-screen min-h-screen relative px-2">
       <div className="text-black flex items-center justify-between bg-slate-400 p-4 my-8 font-semibold">
         <p className="text-2xl">Product view</p>
         <p>

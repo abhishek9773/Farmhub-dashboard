@@ -27,17 +27,20 @@ const Header = () => {
         <Link to={"/"} className="md:text-4xl font-bold  text-2xl">
           FarmDash
         </Link>
-        <motion.button
-          whileTap={{ scale: 0.9 }}
-          onClick={() => context.setIsToggleSidebar(!context.isToggleSidebar)}
-          className="bg-gray-300/30 hover:bg-blue-300/30 rounded-full w-[36px] h-[36px] flex items-center justify-center"
-        >
-          {context.isToggleSidebar === false ? (
-            <CiBoxList className="font-bold text-xl" />
-          ) : (
-            <MdOutlinePlaylistRemove className="font-bold text-xl" />
-          )}
-        </motion.button>
+
+        <div className="hidden lg:block">
+          <motion.button
+            whileTap={{ scale: 0.9 }}
+            onClick={() => context.setIsToggleSidebar(!context.isToggleSidebar)}
+            className="bg-gray-300/30 hover:bg-blue-300/30 rounded-full w-[36px] h-[36px] flex items-center justify-center"
+          >
+            {context.isToggleSidebar === false ? (
+              <CiBoxList className="font-bold text-xl" />
+            ) : (
+              <MdOutlinePlaylistRemove className="font-bold text-xl" />
+            )}
+          </motion.button>
+        </div>
       </div>
       <div className="hidden lg:block">
         <input

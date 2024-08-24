@@ -61,7 +61,7 @@ const Dashboard = () => {
 
   return (
     <div
-      className={` py-[60px] ${
+      className={` py-[60px] px-2 ${
         background ? " bg-lime-50" : "bg-gray-400"
       } inset-0 `}
     >

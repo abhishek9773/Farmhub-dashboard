@@ -44,7 +44,10 @@ const Messages = () => {
           <div className="p-1 rounded-full bg-slate-300 cursor-pointer hover:bg-lime-100">
             <BiLike className="rotate-180" />
           </div>
-          <div className="p-1 rounded-full bg-slate-300 cursor-pointer hover:bg-lime-100">
+          <div
+            title="Replay"
+            className="p-1 rounded-full bg-slate-300 cursor-pointer hover:bg-lime-100"
+          >
             {" "}
             <FaReply className="text-gray-800 " />
           </div>

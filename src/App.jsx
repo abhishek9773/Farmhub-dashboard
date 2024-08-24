@@ -15,6 +15,7 @@ import Register from "./pages/Register/Register";
 import Custom404 from "./pages/404";
 import { CgDarkMode } from "react-icons/cg";
 import ProductDetails from "./pages/ProductDetails";
+import ProductUpload from "./pages/ProductUpload";
 
 export const Mycontext = createContext();
 
@@ -68,8 +69,8 @@ export default function App() {
             {/* Sidebar transition */}
             {!isHiddenSidebarAndHeader && (
               <div
-                className={`${
-                  isToggleSidebar ? "w-0" : "w-1/5"
+                className={`w-0 ${
+                  isToggleSidebar ? "md:w-0" : "md:w-1/5"
                 } transition-all ease-in-out duration-300`}
               >
                 <SlideBar />
@@ -77,8 +78,8 @@ export default function App() {
             )}
             {/* Main content transition */}
             <div
-              className={`${
-                isToggleSidebar ? "w-full" : "w-4/5"
+              className={`w-full ${
+                isToggleSidebar ? "md:w-full" : "md:w-4/5"
               } flex-grow h-full transition-all ease-in-out duration-300`}
             >
               <Routes>
@@ -88,6 +89,7 @@ export default function App() {
                 <Route path="/register" element={<Register />} />
 
                 <Route path="/product/details" element={<ProductDetails />} />
+                <Route path="/product/upload" element={<ProductUpload />} />
                 <Route path="/*" element={<Custom404 />} />
               </Routes>
             </div>

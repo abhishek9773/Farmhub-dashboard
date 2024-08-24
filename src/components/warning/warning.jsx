@@ -8,7 +8,7 @@ const MobileAndKeypadMessage = () => {
   // }, [context]);
 
   return (
-    <div className="relative w-full h-full py-2">
+    <div className="relative w-full h-full p-2">
       {/* Message for Large Screens */}
       <div className="flex items-center justify-center h-full w-full bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100">
         <div className="w-full max-w-none flex flex-col items-center p-8 bg-yellow-100 text-yellow-800 border border-yellow-700 shadow-xl rounded-lg text-center">
