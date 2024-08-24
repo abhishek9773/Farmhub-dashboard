@@ -33,7 +33,7 @@ const DashboardBox = ({ className, title, icons, percentage, graph }) => {
   return (
     <div
       className={clsx(
-        `w-[48%] h-[180px] rounded-md p-4 py-2 flex flex-col justify-around relative ${className}`
+        `lg:w-[48%] h-[180px] rounded-md p-4 py-2 flex flex-col justify-around relative ${className}`
       )}
     >
       <div className="text-8xl text-black/10 absolute bottom-7 left-5">
@@ -48,9 +48,9 @@ const DashboardBox = ({ className, title, icons, percentage, graph }) => {
           <div className="text-4xl text-white opacity-40">{icons}</div>
         </div>
       </div>
-      <div className="flex items-center justify-between mb-0 mt-0 text-white font-bold relative">
-        <div className="flex gap-1 text-sm">
-          <span className="bg-black/30 p-[2px] rounded-md">
+      <div className="flex items-center gap-32 justify-between mb-0 mt-0 text-white font-bold relative">
+        <div className="flex gap-1 text-sm whitespace-nowrap">
+          <span className="bg-black/30 px-[3px] md:p-[2px] rounded-md">
             +{percentage}%{" "}
           </span>{" "}
           Last Month
@@ -65,7 +65,7 @@ const DashboardBox = ({ className, title, icons, percentage, graph }) => {
         </button>
 
         {showDropdown && (
-          <div className="absolute right-0 top-full  w-34 bg-lime-50 rounded-md shadow-lg z-10 ">
+          <div className="absolute right-0 bottom-full md:top-full  w-34 bg-lime-50 rounded-md shadow-lg z-20 ">
             <ul className="py-1 text-gray-700 text-sm">
               <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                 <div className="flex gap-1 items-center justify-start">

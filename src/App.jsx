@@ -70,7 +70,7 @@ export default function App() {
             {!isHiddenSidebarAndHeader && (
               <div
                 className={`w-0 ${
-                  isToggleSidebar ? "md:w-0" : "md:w-1/5"
+                  isToggleSidebar ? "lg:w-0" : "lg:w-1/5"
                 } transition-all ease-in-out duration-300`}
               >
                 <SlideBar />
@@ -79,7 +79,7 @@ export default function App() {
             {/* Main content transition */}
             <div
               className={`w-full ${
-                isToggleSidebar ? "md:w-full" : "md:w-4/5"
+                isToggleSidebar ? "lg:w-full" : "lg:w-4/5"
               } flex-grow h-full transition-all ease-in-out duration-300`}
             >
               <Routes>

@@ -65,13 +65,14 @@ const Dashboard = () => {
         background ? " bg-lime-50" : "bg-gray-400"
       } inset-0 `}
     >
-      <div className="hidden lg:block">
+      <div className="">
         <h1 className="text-xl font-semibold p-2">Dashboard</h1>
         <div className="flex flex-wrap   mb-4 p-2  ">
           <div className="w-full md:w-8/12 ">
-            <div className="flex gap-4 flex-wrap">
+            {/* dashbaord 4 box */}
+            <div className="flex gap-4  lg:flex-wrap overflow-x-scroll w-full">
               <DashboardBox
-                className="bg-gradient-to-r from-green-700 to-green-300 rounded-md"
+                className="bg-gradient-to-r from-green-700 to-green-300 rounded-md "
                 title={"Total Users"}
                 icons={<FaUserCircle />}
                 percentage={20}
@@ -100,7 +101,7 @@ const Dashboard = () => {
               />
             </div>
           </div>
-          <div className="w-full md:w-4/12 pl-0">
+          <div className="w-full md:w-4/12 pt-2 md:pt-0 md:pl-0">
             <div className="w-full h-full bg-gradient-to-b from-lime-500 to-lime-300 rounded-md p-4">
               <div className=" relative flex items-center justify-between font-bold text-white">
                 <p className="text-slate-50">Total Sales</p>
@@ -165,10 +166,10 @@ const Dashboard = () => {
           </p>
 
           <div
-            className={`flex items-center justify-between 
+            className={`flex items-center justify-between overflow-x-scroll 
                 ${background ? "bg-lime-50" : "bg-gray-400"}`}
           >
-            <div className="flex flex-col items-start justify-start">
+            <div className="flex flex-col items-start justify-start ">
               <p className="font-bold text-xs text-slate-500"> SHOW BY</p>
               <Dropdown
                 className={""}
