@@ -65,7 +65,7 @@ const DashboardBox = ({ className, title, icons, percentage, graph }) => {
         </button>
 
         {showDropdown && (
-          <div className="absolute right-0 bottom-full md:top-full  w-34 bg-lime-50 rounded-md shadow-lg z-20 ">
+          <div className="absolute right-0 bottom-full   w-34 bg-white rounded-md shadow-lg z-10 ">
             <ul className="py-1 text-gray-700 text-sm">
               <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                 <div className="flex gap-1 items-center justify-start">

@@ -91,7 +91,9 @@ const ProductTable = () => {
                     </Link>
                   </motion.div>
                   <motion.div whileTap={{ scale: 0.9 }}>
-                    <MdModeEdit className="hover:bg-green-300 bg-green-200 text-green-600 p-1 rounded-lg text-2xl cursor-pointer" />
+                    <Link to={"product/upload"}>
+                      <MdModeEdit className="hover:bg-green-300 bg-green-200 text-green-600 p-1 rounded-lg text-2xl cursor-pointer" />
+                    </Link>
                   </motion.div>
                   <motion.div whileTap={{ scale: 0.9 }}>
                     <MdDelete className="bg-red-200 hover:bg-red-300 text-red-600 rounded-lg p-1 text-2xl cursor-pointer" />
